@@ -1,0 +1,48 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: ruben.c726b4cb
+  rev: s-0ebde7c3
+  saveCenter: true
+attribution: ''
+center: 
+  - 151.1719
+  - 46.6796
+  - 2
+description: ''
+Layer: 
+  - id: data
+    Datasource: 
+      dbname: dbinegi
+      extent: -180,-85.0511,180,85.0511
+      geometry_field: geom
+      geometry_table: ''
+      host: localhost
+      key_field: gid
+      max_size: 512
+      password: 1234
+      port: 5432
+      table: |-
+        ( SELECT gid, nombre, geom FROM red_vial
+         WHERE geom && !bbox! AND CASE
+         	WHEN z(!scale_denominator!)>=6 THEN TRUE
+         	WHEN z(!scale_denominator!)>=7 THEN TRUE
+         	WHEN z(!scale_denominator!)>=8 THEN TRUE
+        	WHEN z(!scale_denominator!)>=9 THEN TRUE
+         	WHEN z(!scale_denominator!)>=11 THEN TRUE
+        	WHEN z(!scale_denominator!)>=12 THEN TRUE
+        	WHEN z(!scale_denominator!)>=13 THEN TRUE
+         END
+        ) AS data
+      type: postgis
+      user: postgres
+    description: ''
+    fields: 
+      gid: Number
+      nombre: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 6
+minzoom: 0
+name: Red_vial
