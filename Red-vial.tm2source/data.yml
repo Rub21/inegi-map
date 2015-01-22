@@ -1,19 +1,17 @@
 _prefs: 
-  disabled: 
-    - Red_Vial-NAD83
-    - data
+  disabled: []
   inspector: false
   mapid: ruben.c726b4cb
   rev: s-0ebde7c3
   saveCenter: true
 attribution: ''
 center: 
-  - 88.5938
-  - -84.9901
-  - 0
+  - -90.1566
+  - 20.5878
+  - 9
 description: ''
 Layer: 
-  - id: data
+  - id: red_vial_nad
     Datasource: 
       dbname: dbinegi
       extent: -180,-85.0511,180,85.0511
@@ -25,17 +23,17 @@ Layer:
       password: 1234
       port: 5432
       table: |-
-        ( SELECT gid, nombre, geom FROM red_vial
-         WHERE geom && !bbox! AND CASE
-         	WHEN z(!scale_denominator!)>=6 THEN TRUE
-         	WHEN z(!scale_denominator!)>=7 THEN TRUE
-         	WHEN z(!scale_denominator!)>=8 THEN TRUE
-        	WHEN z(!scale_denominator!)>=9 THEN TRUE
-         	WHEN z(!scale_denominator!)>=11 THEN TRUE
-        	WHEN z(!scale_denominator!)>=12 THEN TRUE
-        	WHEN z(!scale_denominator!)>=13 THEN TRUE
-         END
-        ) AS data
+          ( SELECT gid,nombre,geom FROM red_vial_nad
+                 WHERE geom && !bbox! AND CASE
+                 	WHEN z(!scale_denominator!)>=6 THEN TRUE
+                 	WHEN z(!scale_denominator!)>=7 THEN TRUE
+                 	WHEN z(!scale_denominator!)>=8 THEN TRUE
+                  	WHEN z(!scale_denominator!)>=9 THEN TRUE
+                 	WHEN z(!scale_denominator!)>=11 THEN TRUE
+                  	WHEN z(!scale_denominator!)>=12 THEN TRUE
+                  	WHEN z(!scale_denominator!)>=13 THEN TRUE
+                 END
+          ) AS data
       type: postgis
       user: postgres
     description: ''
@@ -44,7 +42,7 @@ Layer:
       nombre: String
     properties: 
       "buffer-size": 8
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
   - id: Red_Vial-NAD83
     Datasource: 
       file: /home/ruben/data/INEGI/Producto/InformacionEspacial/Shapefile/Red Vial/Red_Vial-NAD83.shp
