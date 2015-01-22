@@ -3,10 +3,10 @@
 <Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
 
 <Parameters>
-  <Parameter name="center">151.1719,46.6796,2</Parameter>
+  <Parameter name="center">88.5938,-84.9901,0</Parameter>
   <Parameter name="format">pbf</Parameter>
-  <Parameter name="json"><![CDATA[{"vector_layers":[{"id":"data","description":"","fields":{"gid":"Number","nombre":"String"}}]}]]></Parameter>
-  <Parameter name="maxzoom">6</Parameter>
+  <Parameter name="json"><![CDATA[{"vector_layers":[{"id":"data","description":"","fields":{"gid":"Number","nombre":"String"}},{"id":"Red_Vial-NAD83","description":"","fields":{"TIPO_VIAL":"String","NOMBRE":"String","CARRILES":"String","VELOCIDAD":"String"}}]}]]></Parameter>
+  <Parameter name="maxzoom">17</Parameter>
   <Parameter name="minzoom">0</Parameter>
   <Parameter name="name"><![CDATA[Red_vial]]></Parameter>
 </Parameters>
@@ -14,7 +14,7 @@
 
 <Layer name="data"
   buffer-size="8"
-  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     
     <Datasource>
        <Parameter name="dbname"><![CDATA[dbinegi]]></Parameter>
@@ -39,6 +39,16 @@
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
        <Parameter name="user"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="Red_Vial-NAD83"
+  buffer-size="8"
+  srs="+proj=sterea +lat_0=46.5 +lon_0=-66.5 +k=0.999912 +x_0=2500000 +y_0=7500000 +ellps=GRS80 +units=m +no_defs">
+    
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/ruben/data/INEGI/Producto/InformacionEspacial/Shapefile/Red Vial/Red_Vial-NAD83.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
 
