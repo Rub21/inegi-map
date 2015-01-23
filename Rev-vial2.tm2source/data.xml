@@ -27,21 +27,20 @@
        <Parameter name="password"><![CDATA[1234]]></Parameter>
        <Parameter name="port"><![CDATA[5432]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT gid,nombre,velocidad,geom FROM red_vial_nad
-             WHERE geom && !bbox! AND CASE
- 			    WHEN z(!scale_denominator!)>=1 AND velocidad>=100 THEN TRUE
+          WHERE geom && !bbox! AND CASE
+ 			        WHEN z(!scale_denominator!)>=1 AND velocidad>=100 THEN TRUE
              	WHEN z(!scale_denominator!)>=2 AND velocidad>=100 THEN TRUE
              	WHEN z(!scale_denominator!)>=3 AND velocidad>=90 THEN TRUE
              	WHEN z(!scale_denominator!)>=4 AND velocidad>=80 THEN TRUE
-              	WHEN z(!scale_denominator!)>=5 AND velocidad>=70 THEN TRUE
-                WHEN z(!scale_denominator!)>=6 AND velocidad>=60 THEN TRUE
-                WHEN z(!scale_denominator!)>=7 AND velocidad>=50 THEN TRUE
-                WHEN z(!scale_denominator!)>=8 AND velocidad>=40 THEN TRUE
-                WHEN z(!scale_denominator!)>=9 AND velocidad>=30 THEN TRUE
-                WHEN z(!scale_denominator!)>=10 AND velocidad>=20 THEN TRUE
+              WHEN z(!scale_denominator!)>=5 AND velocidad>=70 THEN TRUE
+              WHEN z(!scale_denominator!)>=6 AND velocidad>=60 THEN TRUE
+              WHEN z(!scale_denominator!)>=7 AND velocidad>=50 THEN TRUE
+              WHEN z(!scale_denominator!)>=8 AND velocidad>=40 THEN TRUE
+              WHEN z(!scale_denominator!)>=9 AND velocidad>=30 THEN TRUE
+              WHEN z(!scale_denominator!)>=10 AND velocidad>=20 THEN TRUE
              	WHEN z(!scale_denominator!)>=11 AND velocidad>=10 THEN TRUE
-              	WHEN z(!scale_denominator!)>=12 AND velocidad>=0  THEN TRUE
- 
-             END
+              WHEN z(!scale_denominator!)>=12 AND velocidad>=0  THEN TRUE
+          END
       ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
        <Parameter name="user"><![CDATA[postgres]]></Parameter>
