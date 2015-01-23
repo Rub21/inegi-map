@@ -1,14 +1,14 @@
 _prefs: 
   disabled: []
   inspector: false
-  mapid: ''
-  rev: ''
+  mapid: ruben.bca892c4
+  rev: s-6e985fe7
   saveCenter: true
 attribution: ''
 center: 
-  - 0
-  - 0
-  - 3
+  - -11.228
+  - 41.6852
+  - 7
 description: ''
 Layer: 
   - id: data
@@ -23,26 +23,33 @@ Layer:
       password: 1234
       port: 5432
       table: |-
-            ( SELECT gid,nombre,geom FROM red_vial_nad
-                         WHERE geom && !bbox! AND CASE
-                         	WHEN z(!scale_denominator!)>=6 THEN TRUE
-                         	WHEN z(!scale_denominator!)>=7 THEN TRUE
-                         	WHEN z(!scale_denominator!)>=8 THEN TRUE
-                          	WHEN z(!scale_denominator!)>=9 THEN TRUE
-                         	WHEN z(!scale_denominator!)>=11 THEN TRUE
-                          	WHEN z(!scale_denominator!)>=12 THEN TRUE
-                          	WHEN z(!scale_denominator!)>=13 THEN TRUE
-                         END
-                  ) AS data
+        ( SELECT gid,nombre,velocidad,geom FROM red_vial_nad
+                     WHERE geom && !bbox! AND CASE
+         				WHEN z(!scale_denominator!)>=1 AND velocidad>=100 THEN TRUE
+                     	WHEN z(!scale_denominator!)>=2 AND velocidad>=100 THEN TRUE
+                     	WHEN z(!scale_denominator!)>=3 AND velocidad>=90 THEN TRUE
+                     	WHEN z(!scale_denominator!)>=4 AND velocidad>=80 THEN TRUE
+                      	WHEN z(!scale_denominator!)>=5 AND velocidad>=70 THEN TRUE
+                        WHEN z(!scale_denominator!)>=6 AND velocidad>=60 THEN TRUE
+                        WHEN z(!scale_denominator!)>=7 AND velocidad>=50 THEN TRUE
+                        WHEN z(!scale_denominator!)>=8 AND velocidad>=40 THEN TRUE
+                        WHEN z(!scale_denominator!)>=9 AND velocidad>=30 THEN TRUE
+                        WHEN z(!scale_denominator!)>=10 AND velocidad>=20 THEN TRUE
+                     	WHEN z(!scale_denominator!)>=11 AND velocidad>=10 THEN TRUE
+                      	WHEN z(!scale_denominator!)>=12 AND velocidad>=0  THEN TRUE
+                      	--WHEN z(!scale_denominator!)>=13 AND velocidad>0 THEN TRUE
+                     END
+              ) AS data
       type: postgis
       user: postgres
     description: ''
     fields: 
       gid: Number
       nombre: String
+      velocidad: Number
     properties: 
       "buffer-size": 8
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-maxzoom: 6
+maxzoom: 19
 minzoom: 0
-name: ''
+name: Mexico-Red-Vial
