@@ -1,6 +1,4 @@
-Map {
-  background-color: #000;
-}
+
 #osm{
     [zoom <= 18] {      
       line-join: round;

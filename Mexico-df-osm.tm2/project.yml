@@ -1,5 +1,5 @@
 _prefs: 
-  mapid: ''
+  mapid: ruben.e31004f7
   saveCenter: true
 _properties: {}
 attribution: ''
@@ -9,16 +9,16 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -99.1406
-  - 19.4442
-  - 17
+  - -99.1106
+  - 19.4383
+  - 18
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
 maxzoom: 20
-minzoom: 0
-name: ''
+minzoom: 17
+name: Mexico-df-osm
 source: "mapbox:///enf.y4dyrpb9"
 styles: 
   - style.mss

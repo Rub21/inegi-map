@@ -1,5 +1,5 @@
 _prefs: 
-  mapid: ruben.0ae6b044
+  mapid: 
   saveCenter: true
 _properties: {}
 attribution: ''
@@ -16,7 +16,7 @@ description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
-maxzoom: 22
+maxzoom: 20
 minzoom: 10
 name: Mexico-df-diff
 source: "mapbox:///ruben.3a555c60,enf.y4dyrpb9"
