@@ -4,9 +4,9 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">14.2354,48.3038,17</Parameter>
+  <Parameter name="center">14.1831,48.294,12</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
-  <Parameter name="maxzoom">17</Parameter>
+  <Parameter name="maxzoom">20</Parameter>
   <Parameter name="minzoom">11</Parameter>
   <Parameter name="name"><![CDATA[Mexico-red-vial-osm]]></Parameter>
   <Parameter name="source"><![CDATA[mapbox:///enf.y4dyrpb9]]></Parameter>
@@ -26,7 +26,7 @@
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="1.5" />
+    <LineSymbolizer stroke-width="1.8" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>

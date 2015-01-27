@@ -9,14 +9,14 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 14.2354
-  - 48.3038
-  - 17
+  - 14.1831
+  - 48.294
+  - 12
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
-maxzoom: 17
+maxzoom: 20
 minzoom: 11
 name: Mexico-red-vial-osm
 source: "mapbox:///enf.y4dyrpb9"
