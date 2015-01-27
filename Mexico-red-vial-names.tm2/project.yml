@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: ruben.9dd56428
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -99.2567
+  - 18.2651
+  - 12
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 18
+minzoom: 5
+name: Mexico-red-vial-names
+source: "mapbox:///ruben.fdc1b5d8"
+styles: 
+  - label.mss
+template: ''

@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: ruben.2f887af4
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -102.1069
+  - 22.1416
+  - 7
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 18
+minzoom: 5
+name: Mexico-red-vial-diff
+source: "mapbox:///ruben.fdc1b5d8,enf.y4dyrpb9"
+styles: 
+  - style.mss
+template: ''

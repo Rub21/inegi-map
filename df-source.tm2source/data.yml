@@ -1,0 +1,70 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: ruben.3a555c60
+  rev: s-bc0ca2ab
+  saveCenter: true
+attribution: ''
+center: 
+  - -99.1688
+  - 19.3618
+  - 12
+description: ''
+Layer: 
+  - id: data
+    Datasource: 
+      dbname: dbinegi
+      extent: -180,-85.0511,180,85.0511
+      geometry_field: geom
+      geometry_table: ''
+      host: localhost
+      key_field: gid
+      max_size: 512
+      password: 1234
+      port: 5432
+      table: |-
+        ( SELECT gid,  tipovial, nomvial,geom FROM road_df
+           WHERE geom && !bbox!   AND CASE
+           WHEN z(!scale_denominator!)>=10  AND tipovial='AVENIDA' THEN TRUE
+           WHEN z(!scale_denominator!)>=11  AND (tipovial='AVENIDA' 
+           OR tipovial='CERRADA'
+           OR tipovial='PRIVADA' 
+           OR tipovial='EJE VIAL' 
+           OR tipovial='ANDADOR' 
+           OR tipovial='CIRCUITO'
+           OR tipovial='DIAGONAL'
+           OR tipovial='PASAJE'
+           OR tipovial='AMPLIACIÓN'
+           OR tipovial='AUTOPISTA'
+           OR tipovial='PERIFÉRICO'
+           OR tipovial='VIADUCTO'
+           OR tipovial='RETORNO'
+           OR tipovial='CARRETERA'
+           OR tipovial='PEATONAL'
+           OR tipovial='BOULEVARD'
+           OR tipovial='OTRO'
+           OR tipovial='PROLONGACIÓN'
+         ) THEN TRUE
+            WHEN z(!scale_denominator!)>=12 AND (tipovial='AVENIDA' 
+            OR tipovial='CERRADA' 
+            OR tipovial='PRIVADA' 
+            OR tipovial='EJE VIAL' 
+            OR tipovial='ANDADOR' 
+            OR tipovial='CIRCUITO'  
+            OR tipovial='CALLE')  THEN TRUE
+            WHEN z(!scale_denominator!)>=113   THEN TRUE 
+         END
+          ) AS data
+      type: postgis
+      user: postgres
+    description: ''
+    fields: 
+      gid: Number
+      nomvial: String
+      tipovial: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 15
+minzoom: 10
+name: Mexico-df-source

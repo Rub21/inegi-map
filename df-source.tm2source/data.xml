@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+<Parameters>
+  <Parameter name="center">-99.1688,19.3618,12</Parameter>
+  <Parameter name="format">pbf</Parameter>
+  <Parameter name="json"><![CDATA[{"vector_layers":[{"id":"data","description":"","fields":{"gid":"Number","tipovial":"String","nomvial":"String"}}]}]]></Parameter>
+  <Parameter name="maxzoom">15</Parameter>
+  <Parameter name="minzoom">10</Parameter>
+  <Parameter name="name"><![CDATA[Mexico-df-source]]></Parameter>
+</Parameters>
+
+
+<Layer name="data"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[dbinegi]]></Parameter>
+       <Parameter name="extent"><![CDATA[-180,-85.0511,180,85.0511]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="geometry_table"><![CDATA[]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="max_size"><![CDATA[512]]></Parameter>
+       <Parameter name="password"><![CDATA[1234]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT gid,  tipovial, nomvial,geom FROM road_df
+   WHERE geom && !bbox!   AND CASE
+   WHEN z(!scale_denominator!)>=10  AND tipovial='AVENIDA' THEN TRUE
+   WHEN z(!scale_denominator!)>=11  AND (tipovial='AVENIDA' 
+   OR tipovial='CERRADA'
+   OR tipovial='PRIVADA' 
+   OR tipovial='EJE VIAL' 
+   OR tipovial='ANDADOR' 
+   OR tipovial='CIRCUITO'
+   OR tipovial='DIAGONAL'
+   OR tipovial='PASAJE'
+   OR tipovial='AMPLIACIÓN'
+   OR tipovial='AUTOPISTA'
+   OR tipovial='PERIFÉRICO'
+   OR tipovial='VIADUCTO'
+   OR tipovial='RETORNO'
+   OR tipovial='CARRETERA'
+   OR tipovial='PEATONAL'
+   OR tipovial='BOULEVARD'
+   OR tipovial='OTRO'
+   OR tipovial='PROLONGACIÓN'
+ ) THEN TRUE
+    WHEN z(!scale_denominator!)>=12 AND (tipovial='AVENIDA' 
+    OR tipovial='CERRADA' 
+    OR tipovial='PRIVADA' 
+    OR tipovial='EJE VIAL' 
+    OR tipovial='ANDADOR' 
+    OR tipovial='CIRCUITO'  
+    OR tipovial='CALLE')  THEN TRUE
+    WHEN z(!scale_denominator!)>=113   THEN TRUE 
+ END
+  ) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
