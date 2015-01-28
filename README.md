@@ -1,7 +1,8 @@
 # inegi-map
 
 ### Step 1. Dowloand data from INEGI
-descargar los datos de 
+
+Descargar los datos de la red vial de INEGI : http://www3.inegi.org.mx/sistemas/productos/default.aspx?c=265&upc=0&s=est&tg=3604&f=2&cl=0&pf=prod&ef=0&ct=201100000&pg=2
 
 ### Step 2. Import  data to Postgres
 
@@ -20,6 +21,8 @@ https://github.com/mapbox/postgis-vt-util/blob/master/lib.sql
 
 ![screenshot from 2015-01-28 11 15 49](https://cloud.githubusercontent.com/assets/1152236/5941450/1b67186c-a6df-11e4-8a23-c462e17570da.png)
 ![screenshot from 2015-01-28 11 16 06](https://cloud.githubusercontent.com/assets/1152236/5941451/1b691ac2-a6df-11e4-9d3b-1c279707a1dd.png)
+
+
 
 
 #### Otra alternativa  usar [tippecanoe](https://github.com/mapbox/tippecanoe)

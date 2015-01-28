@@ -3,7 +3,7 @@
 <Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
 
 <Parameters>
-  <Parameter name="center">-100.5139,19.9117,11</Parameter>
+  <Parameter name="center">-101.272,24.297,6</Parameter>
   <Parameter name="format">pbf</Parameter>
   <Parameter name="json"><![CDATA[{"vector_layers":[{"id":"red","description":"","fields":{"gid":"Number","dato":"String","velocidad":"Number"}}]}]]></Parameter>
   <Parameter name="maxzoom">15</Parameter>
@@ -18,7 +18,7 @@
     
     <Datasource>
        <Parameter name="dbname"><![CDATA[dbinegi]]></Parameter>
-       <Parameter name="extent"><![CDATA[-180,-85.0511,180,85.0511]]></Parameter>
+       <Parameter name="extent"><![CDATA[-117.12270632869 14.5593058307667,-86.7434787749603 32.718167909526]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
        <Parameter name="geometry_table"><![CDATA[]]></Parameter>
        <Parameter name="host"><![CDATA[localhost]]></Parameter>
