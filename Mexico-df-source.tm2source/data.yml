@@ -2,7 +2,7 @@ _prefs:
   disabled: []
   inspector: false
   mapid: ruben.3a555c60
-  rev: s-bc0ca2ab
+  rev: s-5e607609
   saveCenter: true
 attribution: ''
 center: 
@@ -14,7 +14,7 @@ Layer:
   - id: data
     Datasource: 
       dbname: dbinegi
-      extent: -180,-85.0511,180,85.0511
+      extent: -99.34305573235 19.1240921738,-98.94664368019 19.59275727963
       geometry_field: geom
       geometry_table: ''
       host: localhost

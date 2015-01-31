@@ -18,7 +18,7 @@
     
     <Datasource>
        <Parameter name="dbname"><![CDATA[dbinegi]]></Parameter>
-       <Parameter name="extent"><![CDATA[-180,-85.0511,180,85.0511]]></Parameter>
+       <Parameter name="extent"><![CDATA[-99.34305573235 19.1240921738,-98.94664368019 19.59275727963]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
        <Parameter name="geometry_table"><![CDATA[]]></Parameter>
        <Parameter name="host"><![CDATA[localhost]]></Parameter>

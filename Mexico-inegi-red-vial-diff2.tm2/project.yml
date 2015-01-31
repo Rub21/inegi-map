@@ -1,5 +1,5 @@
 _prefs: 
-  mapid: ruben.887e8261
+  mapid: ruben.8901686a
   saveCenter: true
 _properties: {}
 attribution: ''
@@ -9,17 +9,17 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -97.7645
-  - 21.5201
-  - 15
+  - -104.4031
+  - 23.4683
+  - 7
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
 maxzoom: 20
 minzoom: 5
-name: Mexico-inegi-red-vial-names
-source: "mapbox:///ruben.afe621a4"
+name: Mexico-inegi-red-vial-diff2
+source: "mapbox:///ruben.afe621a4,enf.y4dyrpb9"
 styles: 
   - style.mss
 template: ''
