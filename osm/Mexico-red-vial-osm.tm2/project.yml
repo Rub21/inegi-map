@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: ruben.78432285
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - 14.1831
+  - 48.294
+  - 12
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 17
+minzoom: 11
+name: Mexico-red-vial-osm
+source: "mapbox:///enf.y4dyrpb9"
+styles: 
+  - style.mss
+template: ''

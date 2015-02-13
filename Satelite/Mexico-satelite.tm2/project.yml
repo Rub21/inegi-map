@@ -1,0 +1,27 @@
+_prefs: 
+  mapid: ruben.da022b46
+  saveCenter: true
+_properties: 
+  bridge: 
+    "group-by": layer
+attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>"
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -104.09
+  - 19.2411
+  - 8
+description: ''
+format: jpeg95
+interactivity_layer: ''
+layers: null
+maxzoom: 14
+minzoom: 0
+name: Mexico-Map-df-satelite
+source: "mapbox:///mapbox.satellite,mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
+styles: 
+  - style.mss
+template: ''

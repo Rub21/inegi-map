@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-99.1216,19.426,17</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">17</Parameter>
+  <Parameter name="minzoom">16</Parameter>
+  <Parameter name="name"><![CDATA[Mexico-df-osm-web(10-17)]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///enf.y4dyrpb9]]></Parameter>
+</Parameters>
+
+
+<Style name="osm" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="10" stroke="#000000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="12" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="osm"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>osm</StyleName>  </Layer>
+
+</Map>
